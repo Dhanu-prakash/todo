@@ -25,13 +25,44 @@
     display: grid;
     height:90vh;
     background-color: var(--second-color);
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
     padding:16px;
-    grid-template-areas: "textInput addBtn"
-                         "ul ul";
+    grid-template-areas: "textInput textInput addBtn"
+                         "all avial done"
+                         "ul ul ul";
 
     border-radius: 5px;
     
+}
+
+#filterAll{
+    grid-area:all;
+}
+#filterAvailable{
+ grid-area:avail
+}
+#filterDone{
+    grid-area: done
+}
+
+#filterAll::hover{
+    transition: all 0.3s ease-in;
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
+#filterAvailable::hover{
+    transition: all 0.3s ease-in;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#filterDone::hover{
+    transition: all 0.3s ease-in;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #myList{
